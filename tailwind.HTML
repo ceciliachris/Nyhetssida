@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<div class="flex flex-col min-h-screen">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoddNyheter - Dina senaste poddnyheter</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome för ikoner -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Extra CSS om det behövs -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Navbar -->
+    <nav class="bg-purple-200 text-black shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="text-xl font-bold">PoddNyheter</div>
+                
+                <!-- Hamburger-meny för mobil -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop-menylänkar -->
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="hover:text-gray-500">Hem</a>
+                    <a href="#" class="hover:text-gray-500">Populära poddar</a>
+                    <a href="#" class="hover:text-gray-500">Populära avsnitt</a>
+                    <a href="#" class="hover:text-gray-500">Poddtips</a>
+                    <a href="#" class="hover:text-gray-500">Kontakta oss</a>
+                </div>
+            </div>
+            
+            <!-- Mobil-meny (dold som standard) -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#" class="block py-2 hover:text-gray-500">Hem</a>
+                <a href="#" class="block py-2 hover:text-gray-500">Populära poddar</a>
+                <a href="#" class="block py-2 hover:text-gray-500">Populära avsnitt</a>
+                <a href="#" class="block py-2 hover:text-gray-500">Poddtips</a>
+                <a href="#" class="block py-2 hover:text-gray-500">Kontakta oss</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Huvudinnehåll -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row">
+            <!-- Huvudnyheter -->
+            <main class="w-full md:w-2/3 pr-0 md:pr-8">
+                <h1 class="text-3xl font-bold mb-6">Senaste nyheterna</h1>
+                
+                <!-- Huvudartikel -->
+                <article class="bg-white rounded-lg shadow-md mb-8 overflow-hidden">
+                    <img src="bilder\Kontor.jpg" alt="Huvudnyhet" class="w-full h-70 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-2xl font-bold mb-2">Huvudnyhet</h2>
+                        <p class="text-gray-500 mb-4">Publicerad: 17 mars 2025 | Av: </p>
+                        <p class="mb-4">Här skrivs artikeltexten.</p>
+                        <a href="#" class="text-blue-600 hover:underline">Läs mer</a>
+                    </div>
+                </article>
+                
+                <!-- Fler nyhetsartiklar -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Artikel 1 -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="bilder\hund.jpg" alt="Nyhet 1" class="w-full h-70 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">artikelrubrik</h3>
+                            <p class="text-gray-500 mb-2">17 mars 2025 | ämne?</p>
+                            <p class="mb-3">TEXT.</p>
+                            <a href="#" class="text-blue-600 hover:underline">Läs mer</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Artikel 2 -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="bilder\spotify.png" alt="Nyhet 2" class="w-full h-70 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">ArtikelRubrik</h3>
+                            <p class="text-gray-500 mb-2">16 mars 2025 | ämne?</p>
+                            <p class="mb-3">text text</p>
+                            <a href="#" class="text-blue-600 hover:underline">Läs mer</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Artikel 3 -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="bilder\färgglad-katt.png" alt="Nyhet 3" class="w-full h-70 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Artikelrubrik</h3>
+                            <p class="text-gray-500 mb-2">15 mars 2025 | ämne?</p>
+                            <p class="mb-3">text text</p>
+                            <a href="#" class="text-blue-600 hover:underline">Läs mer</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Artikel 4 -->
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="bilder\podcast-studio.png" alt="Nyhet 4" class="w-full h-70 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Artikelrubrik</h3>
+                            <p class="text-gray-500 mb-2">14 mars 2025 | Ämne?</p>
+                            <p class="mb-3">Text hääääär.</p>
+                            <a href="#" class="text-blue-600 hover:underline">Läs mer</a>
+                        </div>
+                    </article>
+                </div>
+            </main>
+            
+            <!-- Sidebar -->
+            <aside class="w-full md:w-1/3 mt-8 md:mt-0">
+                <!-- Sökruta -->
+                <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                    <h2 class="text-xl font-bold mb-4">Sök nyheter</h2>
+                    <div class="flex">
+                        <input type="text" placeholder="Sök..." class="w-full px-4 py-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded-r hover:bg-blue-700">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Populära artiklar -->
+                <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                    <h2 class="text-xl font-bold mb-4">Mest lästa</h2>
+                    <ul>
+                        <li class="mb-4 pb-4 border-b border-gray-200">
+                            <a href="#" class="hover:text-blue-600">
+                                <h3 class="font-semibold">Missa inte: Årets största konsert kommer till Stockholm</h3>
+                                <p class="text-gray-500 text-sm">14 mars | Nöje</p>
+                            </a>
+                        </li>
+                        <li class="mb-4 pb-4 border-b border-gray-200">
+                            <a href="#" class="hover:text-blue-600">
+                                <h3 class="font-semibold">Stor ökning av husdjursägare efter pandemin</h3>
+                                <p class="text-gray-500 text-sm">16 mars | Livsstil</p>
+                            </a>
+                        </li>
+                        <li class="mb-4 pb-4 border-b border-gray-200">
+                            <a href="#" class="hover:text-blue-600">
+                                <h3 class="font-semibold">Nya regler för elbilar träder i kraft nästa månad</h3>
+                                <p class="text-gray-500 text-sm">15 mars | Trafik</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-blue-600">
+                                <h3 class="font-semibold">Recension: Vårens hetaste restaurang levererar</h3>
+                                <p class="text-gray-500 text-sm">13 mars | Mat</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Vädret -->
+                <div class="bg-white p-4 rounded-lg shadow-md mb-6">
+                    <h2 class="text-xl font-bold mb-4">Vädret idag</h2>
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-lg font-bold">Stockholm</p>
+                            <p>+5°C, Delvis molnigt</p>
+                        </div>
+                        <i class="fas fa-cloud-sun text-4xl text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Annons -->
+                <div class="bg-yellow-100 p-4 rounded-lg shadow-md text-center">
+                    <p class="text-sm text-gray-500 mb-2">ANNONS</p>
+                    <div class="bg-gray-200 h-40 flex items-center justify-center">
+                        <p class="text-gray-500">Annonsplats</p>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-purple-200 text-black py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <!-- Om oss -->
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">Om PoddNyheter</h3>
+                    <p class="max-w-md">PoddNyheter är en nyhetskälla med dagliga rapporteringar om svenska poddare, vilka avsnitt som har släppts, topplista på poddar och avsnitt och poddtips.</p>
+                </div>
+                
+                <!-- Snabblänkar -->
+                <div class="mb-6 md:mb-0">
+                            <div class="mt-6 md:mt-0">
+                                <h3 class="text-xl font-bold mb-4">Följ oss</h3>
+                                <ul>
+                                    <li class="mb-2">
+                                        <a href="#" class="flex items-center hover:text-blue-300">
+                                            <i class="fab fa-facebook-f w-6"></i> Facebook
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#" class="flex items-center hover:text-blue-300">
+                                            <i class="fab fa-twitter w-6"></i> Twitter
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#" class="flex items-center hover:text-blue-300">
+                                            <i class="fab fa-instagram w-6"></i> Instagram
+                                        </a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="#" class="flex items-center hover:text-blue-300">
+                                            <i class="fab fa-youtube w-6"></i> YouTube
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="flex items-center hover:text-blue-300">
+                                            <i class="fab fa-linkedin-in w-6"></i> LinkedIn
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </div>
