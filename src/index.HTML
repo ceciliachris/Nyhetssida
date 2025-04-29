@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-
         .gradient-bg {
             background: linear-gradient(to bottom, #141212, #423d3f, #424141, #747373);
             min-height: 100vh;
@@ -23,12 +22,6 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
-        .animated-bg {
-            background: linear-gradient(-45deg, #ffffff,#000000);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-        
         @keyframes gradient {
             0% {
                 background-position: 0% 50%;
@@ -40,15 +33,10 @@
                 background-position: 0% 50%;
             }
         }
-
+        
         .fancy-button {
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(74, 38, 106, 0.2);
-        }
-        
-        .fancy-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 8px rgb(255, 255, 255);
         }
     </style>
 </head>
@@ -57,7 +45,7 @@
     <div class="flex flex-col min-h-screen">
     <!-- Navbar -->
     <div class="container mx-auto px-4 py-3">
-    <nav class="text-white bg-black bg-opacity-80 rounded-2xl shadow-lg px-6 backdrop-blir-sm">
+    <nav class="text-white bg-black bg-opacity-80 rounded-2xl shadow-lg px-6 backdrop-blur-sm">
         <div class="container mx-auto">
             <div class="flex justify-between items-center py-3">
                 <!-- Logo -->
@@ -98,77 +86,36 @@
             <!-- Huvudnyheter -->
             <main class="w-full md:w-2/3 pr-0 md:pr-8">
                 <h1 class="text-3xl font-bold mb-6 text-white">Senaste nyheterna</h1>
-                
-                <!-- Huvudartikel -->
-                <article class="article-card bg-white bg-opacity-90 rounded-lg shadow-lg mb-8 overflow-hidden">
-                    <img src="bilder\Kontor.jpg" alt="Huvudnyhet" class="w-full h-70 object-cover" />
-                    <div class="p-6">
-                        <h2 class="text-2xl font-bold mb-2">Svenska poddmarknaden passerar milstolpe – över 60 procent av befolkningen lyssnar regelbundet</h2>
-                        <p class="text-gray-500 mb-4">Publicerad: 17 mars 2025</p>
-                        <p class="mb-4">Sverige befäster sin position som en av världens mest podd-täta nationer enligt färsk statistik från Mediemätningen 2024. För första gången lyssnar nu över 60 procent av den svenska befolkningen regelbundet på poddar, vilket placerar podcasting som ett av landets mest konsumerade medieformat.</p>
-                        <a href="#" class="fancy-button inline-block px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-500 text-white rounded-lg hover:from-gray-500 hover:to-gray-800">Läs mer</a>
-                    </div>
-                </article>
-                
-                <!-- nyhetsartiklar -->
-                <div class="grid md:grid-cols-2 gap-6">
-                    <!-- Artikel 1 -->
-                    <article class="article-card bg-white bg-opacity-90 rounded-lg shadow-md overflow-hidden">
-                        <img src="bilder\hund.jpg" alt="Nyhet 1" class="w-full h-70 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Poddar som utbildar – lyssna dig smartare med dessa kunskapskanaler</h3>
-                            <p class="text-gray-500 mb-2">17 mars 2025</p>
-                            <p class="mb-3">I en tid när livslångt lärande blivit allt viktigare har kunskapsinriktade poddar vuxit fram som ett effektivt sätt att ta till sig ny information. Här är några av de bästa poddarna för att lyssna dig smartare inom olika ämnesområden.</p>
-                            <a href="#" class="fancy-button inline-block px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-500 text-white rounded-lg hover:from-gray-500 hover:to-gray-800">Läs mer</a>
-                        </div>
-                    </article>
-                    
-                    <!-- Artikel 2 -->
-                    <article class="article-card bg-white bg-opacity-90 rounded-lg shadow-md overflow-hidden">
-                        <img src="bilder\spotify.png" alt="Nyhet 2" class="w-full h-70 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">De mest lyssnade svenska poddarna 2024 – vilka toppar listorna?</h3>
-                            <p class="text-gray-500 mb-2">16 mars 2025</p>
-                            <p class="mb-3">Den svenska poddmarknaden fortsätter att växa med rekordfart och kampen om lyssnarnas öron blir allt hårdare. Under 2024 har flera etablerade poddar behållit sina topppositioner samtidigt som några överraskande nykomlingar klättrat på listorna.</p>
-                            <a href="#" class="fancy-button inline-block px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-500 text-white rounded-lg hover:from-gray-500 hover:to-gray-800">Läs mer</a>
-                        </div>
-                    </article>
-                    
-                    <!-- Artikel 3 -->
-                    <article class="article-card bg-white bg-opacity-90 rounded-lg shadow-md overflow-hidden">
-                        <img src="bilder/färgglad-katt.png" alt="Nyhet 3" class="w-full h-70 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Nya trender inom podcasting – så förändras branschen</h3>
-                            <p class="text-gray-500 mb-2">15 mars 2025</p>
-                            <p class="mb-3">Poddmediet fortsätter att utvecklas i snabb takt, och flera nya trender formar just nu branschens framtid. Vi har identifierat de viktigaste utvecklingslinjerna som kommer att påverka både poddkreatörer och lyssnare under kommande år.</p>
-                            <a href="#" class="fancy-button inline-block px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-500 text-white rounded-lg hover:from-gray-500 hover:to-gray-800">Läs mer</a>
-                        </div>
-                    </article>
-                    
-                    <!-- Artikel 4 -->
-                    <article class="article-card bg-white bg-opacity-90 rounded-lg shadow-md overflow-hidden">
-                        <img src="bilder\podcast-studio.png" alt="Nyhet 4" class="w-full h-70 object-cover">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Så skapar du en framgångsrik podd från grunden – tips från branschexperter</h3>
-                            <p class="text-gray-500 mb-2">14 mars 2025</p>
-                            <p class="mb-3">Drömmer du om att starta en framgångsrik podcast? Vi har samlat de bästa råden från några av Sveriges mest framgångsrika poddproducenter och poddare för att hjälpa dig på vägen.</p>
-                            <a href="#" class="fancy-button inline-block px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-500 text-white rounded-lg hover:from-gray-500 hover:to-gray-800">Läs mer</a>
-                        </div>
-                    </article>
+                <div id="articles-container">
+                    <!-- Här kommer artiklarna att visas automatiskt -->
                 </div>
             </main>
-            
+                            
             <!-- Sidebar -->
             <aside class="w-full md:w-1/3 flex flex-col">
-                <!-- Sökruta -->
-                <div class="bg-white bg-opacity-20 p-5 rounded-lg shadow-md mb-6 backdrop-filter backdrop-blur-sm mt-14">
-                    <h2 class="text-xl font-bold mb-4 text-white">Sök nyheter</h2>
-                    <div class="flex">
-                        <input type="text" placeholder="Sök..." class="w-full px-4 py-2 border rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <button class="bg-gray-900 text-white px-4 py-2 rounded-r hover:bg-blue-700">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
+                <!-- Artikelformulär -->
+                <div class="bg-white bg-opacity-20 p-5 rounded-lg shadow-md mb-6 backdrop-filter backdrop-blur-sm">
+                    <h2 class="text-xl font-bold mb-4 text-white">✍️ Skriv ny artikel</h2>
+                    <form id="articleForm" class="space-y-4">
+                        <input type="text" id="title" placeholder="Rubrik" required class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-800" />
+                        <textarea id="content" placeholder="Text" required rows="4" class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-800"></textarea>
+                        <input type="text" id="category" placeholder="Kategori" required class="w-full p-3 border rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-800" />
+                        
+                        <!-- Bilduppladdningsfält -->
+                        <div class="border border-gray-300 rounded-xl p-3 bg-white bg-opacity-20">
+                            <label for="imageUpload" class="block text-white text-sm mb-2">Ladda upp bild</label>
+                            <div class="flex items-center">
+                                <input type="file" id="imageUpload" accept="image/*" class="hidden" />
+                                <button type="button" id="uploadButton" class="bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg mr-2">Välj bild</button>
+                                <span id="fileNameDisplay" class="text-white text-sm">Ingen fil vald</span>
+                            </div>
+                            <div id="imagePreview" class="mt-3 hidden">
+                                <img id="previewImage" class="max-h-32 rounded-lg" />
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="fancy-button w-full px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-500 text-white rounded-lg hover:from-gray-500 hover:to-gray-800">Publicera artikel</button>
+                    </form>
                 </div>
                 
                 <!-- Populära artiklar -->
@@ -212,22 +159,6 @@
                         </div>
                         <i class="fas fa-cloud-sun text-4xl text-yellow-400"></i>
                     </div>
-                </div>
-                
-                <!-- Dagens poddtips -->
-                <div class="animated-bg p-5 rounded-lg shadow-md text-center">
-                    <p class="text-xl font-bold mb-2 text-white">Dagens poddtips</p>
-                    <div class="rounded-lg overflow-hidden">
-                        <!-- Bara bilden i containern -->
-                        <img src="bilder\P3 dokumentär.jpg" alt="Annonsbild" class="w-full object-cover rounded-lg">
-                    </div>
-                    
-                    <div class="mt-3 px-2">
-                        <p class="font-bold text-lg text-white">"Opioidkrisen och massdöden"</p>
-                        <p class="text-sm text-white">P3 Dokumentär</p>
-                        <button class="mt-2 fancy-button bg-white text-gray-800 px-4 py-1 rounded-full text-sm font-bold shadow">Lyssna nu</button>
-                    </div>
-                </div>
                 </div>
             </aside>
         </div>
@@ -278,10 +209,14 @@
             </div>
           </div>
         </div>
-      </footer>
+    </footer>
     </div>
-    <script>document.getElementById('menu-toggle').addEventListener('click', function() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-    });</script>
+
+    <div id="toast" class="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-xl shadow-lg hidden transition-opacity duration-500">
+        Artikeln har sparats!
+    </div>
+
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
 </body>
+</html>
