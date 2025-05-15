@@ -1,61 +1,64 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
   <meta charset="UTF-8">
   <title>Kontakta oss</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>  
+  <style>
     .gradient-bg {
       background: linear-gradient(to bottom, #141212, #423d3f, #424141, #747373);
       min-height: 100vh;
-    } 
-  
+    }
+
     .fancy-button {
       transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(74, 38, 106, 0.2);
     }
-    </style>
+  </style>
 </head>
+
 <body class="font-sans gradient-bg text-white">
-    <!-- Navbar -->
- <div class="container mx-auto px-4 py-3">
+  <!-- Navbar -->
+  <div class="container mx-auto px-4 py-3">
     <nav class="text-white bg-black bg-opacity-80 rounded-2xl shadow-lg px-6 backdrop-blur-sm">
-        <div class="container mx-auto">
-            <div class="flex justify-between items-center py-3">
-                <!-- Logo -->
-                <div class="text-xl font-bold">
-                  <a href="index.html">PoddNyheter</a>
-                </div>
-                
-                <!-- Hamburger-meny för mobil -->
-                <div class="md:hidden">
-                    <button id="menu-toggle" class="focus:outline-none">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-                
-                <!-- Desktop-menylänkar -->
-                <div class="hidden md:flex space-x-6">
-                    <a href="index.html" class="hover:text-gray-500">Hem</a>
-                    <a href="popular.html" class="hover:text-gray-500">Populära poddar</a>
-                    <a href="contact.html" class="hover:text-gray-500">Kontakta oss</a>
-                </div>
-            </div>
-            
-            <!-- Mobil-meny -->
-            <div id="mobile-menu" class="md:hidden hidden pb-4">
-                <a href="index.html" class="block py-2 hover:text-gray-500">Hem</a>
-                <a href="popular.html" class="block py-2 hover:text-gray-500">Populära poddar</a>
-                <a href="contact.html" class="block py-2 hover:text-gray-500">Kontakta oss</a>
-            </div>
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center py-3">
+          <!-- Logo -->
+          <div class="text-xl font-bold">
+            <a href="index.html">PoddNyheter</a>
+          </div>
+
+          <!-- Hamburger-meny för mobil -->
+          <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+          <!-- Desktop-menylänkar -->
+          <div class="hidden md:flex space-x-6">
+            <a href="index.html" class="hover:text-gray-500">Hem</a>
+            <a href="popular.html" class="hover:text-gray-500">Populära poddar</a>
+            <a href="contact.html" class="hover:text-gray-500">Kontakta oss</a>
+          </div>
         </div>
+
+        <!-- Mobil-meny -->
+        <div id="mobile-menu" class="md:hidden hidden pb-4">
+          <a href="index.html" class="block py-2 hover:text-gray-500">Hem</a>
+          <a href="popular.html" class="block py-2 hover:text-gray-500">Populära poddar</a>
+          <a href="contact.html" class="block py-2 hover:text-gray-500">Kontakta oss</a>
+        </div>
+      </div>
     </nav>
   </div>
 
   <div class="max-w-xl mx-auto p-6">
     <h1 class="text-2xl font-bold mb-6">Kontakta oss</h1>
 
-    <form id="contact-form" class="bg-white bg-opacity-20 p-5 rounded-lg shadow-md mb-6 backdrop-filter backdrop-blur-sm">
+    <form id="contact-form"
+      class="bg-white bg-opacity-20 p-5 rounded-lg shadow-md mb-6 backdrop-filter backdrop-blur-sm">
       <div>
         <label for="name" class="block font-medium">Namn</label>
         <input type="text" id="name" name="name" required class="w-full p-2 border rounded mt-1">
@@ -89,6 +92,13 @@
       thankYou.classList.remove('hidden');
     });
   </script>
-
+  <script src="comments.js"></script>
+  <script src="article.js"></script>
+  <script src="image.js"></script>
+  <script src="popular.js"></script>
+  <script src="toast.js"></script>
+  <script src="updateArticle.js"></script>
+  <script src="menu.js"></script>
 </body>
+
 </html>
