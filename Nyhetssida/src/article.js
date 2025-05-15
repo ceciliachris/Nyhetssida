@@ -62,7 +62,7 @@ function displayArticlesOnHomepage(container) {
         if (article.image) {
             articleHTML += `
           <div class="mb-4">
-            <img src="${article.image}" alt="${article.title}" class="rounded-lg w-full h-48 object-cover" loading="lazy" />
+            <img src="${article.image}" alt="${article.title}" class="rounded-lg w-full h-65 object-cover" loading="lazy" />
           </div>
         `;
         }
